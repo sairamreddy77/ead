@@ -1,0 +1,86 @@
+:root {
+    --grey-lighten-2: #e0e0e0;
+    --grey-darken-4: #212121;
+    --indigo-darken-4: #1a237e;
+    --yellow-darken-3: #f9a825;
+    --grey-lighten-5: #fafafa;
+  }
+  
+  /* font-family: 'Josefin Sans', sans-serif;  wght@600
+  font-family: 'Limelight', cursive;
+  font-family: 'Montserrat', sans-serif;   ital,wght@1,300
+  font-family: 'Roboto', sans-serif; */
+  
+  .nav-wrapper {
+    background-color: var(--grey-darken-4);
+    font-family: "Limelight", cursive;
+  }
+  
+  .nav-wrapper a {
+    color: var(--grey-lighten-2);
+  }
+  
+  body {
+    background: url(../images/CINEMA_SEATS.jpg) no-repeat center fixed;
+    background-size: cover;
+  }
+  
+  .title {
+    font-family: "Montserrat", sans-serif;
+    color: var(--grey-lighten-2);
+  }
+  
+  h5 {
+    font-family: "Roboto", sans-serif;
+    color: var(--grey-lighten-2);
+  }
+  
+  .card {
+    background-color: var(--grey-darken-4);
+  }
+  
+  .card p {
+    color: var(--grey-lighten-2);
+  }
+  
+  .card-content {
+    height: 30vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  
+  .card-content::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* This controls the size of the poster image */
+  
+  .vert img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* This controls the droppable area. */
+  
+  ul.list-group {
+    /* was 215px */
+    height: 350px;
+    background-color: var(--indigo-darken-4);
+  }
+  
+  /* styling for the map page */
+  
+  #map {
+    height: 70vh;
+    width: 100%;
+  }
+  
+  #border {
+    padding: 50px 100px 0 100px;
+  }
