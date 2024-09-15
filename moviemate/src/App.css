@@ -1,42 +1,77 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* color-scheme: light dark; */
+  background-color: #242424;
+  
+}
+
+.homepage {
   text-align: center;
+  padding: 20px;
+  color: white;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-card{
+  width: 200px;
+  background-color: #070707;
+  padding: 10px;
+  margin-bottom: 20px; 
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  min-height: 350px; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.movie-card img {
+  width: 100%;
+  border-radius: 4px;
 }
 
-.card {
-  padding: 2em;
+.movie-card h3 {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: 600;
+  min-height: 50px; /* Ensure title area is of consistent height */
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Limit to 2 lines */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden; /* Hide extra text */
+  text-overflow: ellipsis; /* Add ellipsis (...) for long text */
 }
 
-.read-the-docs {
-  color: #888;
+.movie-card p {
+  font-size: 14px;
+  color: #555;
 }
+
+.home-page {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+h2{
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #fafafa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './HomePage.css'; 
+// import './HomePage.css'; 
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
@@ -9,7 +9,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`);
+        const response = await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`);
         setMovies(response.data.results);
       } catch (error) {
         console.error("Error fetching the latest movies", error);
@@ -20,11 +20,11 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div class="homepage">
+    <div className="homepage">
       <h1>Latest Movies</h1>
-      <div class="movie-list">
+      <div className="movie-list">
         {movies.map(movie => (
-          <div key={movie.id} class="movie-card">
+          <div key={movie.id} className="movie-card">
             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
             <h3>{movie.title}</h3>        
             <p>{movie.release_date}</p>
