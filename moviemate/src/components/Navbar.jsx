@@ -1,6 +1,6 @@
 import React from "react";
 import { Link,useNavigate } from "react-router-dom";
-import './Navbar.css'; 
+
 import { useState } from "react";
 
 const API_KEY = '841a4ea9e517ff49c280b59287f5647b';
@@ -8,7 +8,6 @@ const BASE_URL = 'https://api.themoviedb.org/3/search/movie';
 
 function Navbar() {
     const [searchQuery, setSearchQuery] = useState('');
-    const [movies, setMovies] = useState([]);
     const navigate = useNavigate();
     
     const handleInputChange = (e) => {

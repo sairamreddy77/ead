@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 // import './HomePage.css'; 
+import MovieCard from '../components/MovieCard';
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
@@ -22,13 +23,23 @@ const HomePage = () => {
   return (
     <div className="homepage">
       <h1>Latest Movies</h1>
+
       <div className="movie-list">
+
         {movies.map(movie => (
-          <div key={movie.id} className="movie-card">
-            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-            <h3>{movie.title}</h3>        
-            <p>{movie.release_date}</p>
-          </div>
+          <MovieCard key={movie.id} movie={movie}/>
+
+          // <div key={movie.id} className="movie-card">
+          //   <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+
+          //   <div >
+          //       <h3>{movie.title}</h3>
+          //       <p>{movie.release_date}</p>
+          //       {/* <p className="card-text">{movie.overview.substring(0, 100)}...</p> */}
+          //   </div>
+          // </div>
+
+          
         ))}
       </div>
     </div>

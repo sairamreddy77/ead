@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import HomePage from './pages/HomePage'
 import Navbar from './components/Navbar'
@@ -9,6 +6,7 @@ import WatchList from './pages/WatchList'
 import Favourites from './pages/Favourites'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SearchResults from './pages/SearchResults'
+import MovieDetail from './pages/MovieDetail'
 
 
 
@@ -25,6 +23,7 @@ function App() {
               <Route path="/watch-list" element={<WatchList/>} />
               <Route path="/favourites" element={<Favourites/>} />
               <Route path="/search" element={<SearchResults />} />  {/* New search route */}
+              <Route path="/movie/:id" element={<MovieDetail/>} /> 
           </Routes>
     
       

@@ -4,7 +4,7 @@ function Favourites(){
 
     return(
         <div>
-            <h1>Fav</h1>
+            <h1 className="heading">Fav</h1>
         </div>
     )
 }

@@ -1,5 +1,4 @@
 #root {
-  /* color-scheme: light dark; */
   background-color: #242424;
   
 }
@@ -61,6 +60,19 @@ h2{
   margin-bottom: 20px;
   font-size: 24px;
   color: #fafafa;
+}
+
+.heading{
+  color: white;
+}
+
+.nav-link {
+  color: rgb(255, 255, 255) !important; 
+}
+
+
+.nav-link:hover {
+  color: gray !important;
 }
 
 
