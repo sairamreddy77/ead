@@ -26,14 +26,21 @@ function MovieDetail() {
 
   return (
     <div className="movie-detail">
-      <h2>{movie.title}</h2>
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt={movie.title}
+        width={180}
+        height={320}
+        
       />
-      <p>{movie.overview}</p>
-      <p>Release Date: {movie.release_date}</p>
-      <p>Rating: {movie.vote_average}</p>
+      <div>
+        <h2>{movie.title}</h2>
+        <br />
+        <p>{movie.overview}</p>
+        <p>Release Date: {movie.release_date}</p>
+        <p>Rating: {movie.vote_average}</p>
+      </div>
+      
     </div>
   );
 }

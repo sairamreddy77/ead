@@ -1,4 +1,3 @@
-// MovieCard.js
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -11,10 +10,8 @@ function MovieCard({ movie }) {
       <div >
         <h3>{movie.title}</h3>
         <p>{movie.release_date}</p>
-        {/* <p>{movie.overview.substring(0, 100)}...</p> */}
-        <Link to={`/movie/${movie.id}`} className="btn btn-primary">
-          View
-        </Link>
+
+        <Link to={`/movie/${movie.id}`} className="btn btn-primary"> View More </Link>
       </div>
     </div>
   );

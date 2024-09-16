@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-// import './SeachResults.css';
 import MovieCard from "../components/MovieCard";
-
 
 const API_KEY = '841a4ea9e517ff49c280b59287f5647b';
 const BASE_URL = 'https://api.themoviedb.org/3/search/movie';
@@ -17,7 +15,6 @@ function SearchResults() {
   // '/search' is the 'pathname' and '?query=${searchQuery}' is the 'search'
 
   const searchQuery = new URLSearchParams(location.search).get('query');
-  
 
   useEffect(() => {
     // Fetch search results when the component mounts or when the query changes
@@ -45,24 +42,6 @@ function SearchResults() {
         {movies.length > 0 ? (
           movies.map(movie => (
             <MovieCard key={movie.id} movie={movie}/>
-
-
-            // <div key={movie.id}>
-
-            //   <div className="movie-card">
-            //   <img
-            //     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}/>
-
-            //     <div >
-            //       <h3>{movie.title}</h3>
-            //       <p>{movie.release_date}</p>
-            //       {/* <p className="card-text">{movie.overview.substring(0, 100)}...</p> */}
-            //     </div>
-
-            //   </div>
-            // </div>
-
-            
           ))
         ) : (
           <p>No results found for "{searchQuery}".</p>

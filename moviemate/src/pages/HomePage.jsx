@@ -28,18 +28,6 @@ const HomePage = () => {
 
         {movies.map(movie => (
           <MovieCard key={movie.id} movie={movie}/>
-
-          // <div key={movie.id} className="movie-card">
-          //   <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-
-          //   <div >
-          //       <h3>{movie.title}</h3>
-          //       <p>{movie.release_date}</p>
-          //       {/* <p className="card-text">{movie.overview.substring(0, 100)}...</p> */}
-          //   </div>
-          // </div>
-
-          
         ))}
       </div>
     </div>
